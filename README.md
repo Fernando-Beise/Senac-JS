@@ -3,9 +3,10 @@
 * These lists are in chronological order.
 
 ## Folders:
-* Exercicios = A list of exercises done in class.
-* Desafios = A list of challenges done outside of class.
 * Correções = A list of exercises done in a different way (done by Uriel).
+* Desafios = A list of challenges done outside of class.
+* Exercicios = A list of exercises done in class.
+* Refeitos = A list of old exercises, done with current knowledge .
 
 ## Specs:
 * Done in VSCode.
