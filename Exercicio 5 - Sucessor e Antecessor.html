@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Exercicio 5 - Antecessor e Sucessor</title>
+</head>
+<body>
+    <h1>Calculando Antecessor e Sucessor</h1>
+    <div>
+        <input type="text" name="Numero" id="Numero">
+    </div>
+    <div>
+        <input type="button" name="Antecessor e Sucessor" id="AS" onclick="AS()" value="Antecessor e Sucessor">
+    </div>
+    <script>
+        function AS()
+        {
+        var Num = document.getElementById("Numero").value;
+        var Suc = parseInt(Num) + 1;
+        var Ant = parseInt(Num) - 1;
+        
+        console.log("O sucessor de " + Num + " é " + Suc + ".\nE o Antecessor de " + Num + " é " + Ant + ".");
+        alert("O sucessor de " + Num + " é " + Suc + ".\nE o Antecessor de " + Num + " é " + Ant + ".");
+        }
+    </script>
+</body>
+</html>

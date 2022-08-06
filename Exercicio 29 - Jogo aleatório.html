@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 29 - Jogo do aleatório</title>
+</head>
+<body>
+    <h1>Obs: Crie um jogo do aleatório</h1>
+    <h1></h1>
+    <h1>Insira um numero de 0 a 5:</h1>
+    <div>
+        <input type="text" name="numero" id="numero">
+    </div>
+    <h1></h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="Aleatorio()" value="Acertou?">
+    </div>
+    
+    <script>
+        window.numero = "";
+        window.aleatorio = "";
+
+        window.onload = function(e){
+            window.numero = document.getElementById("numero");
+            window.aleatorio = Math.floor((Math.random()+1)*3);
+        }
+
+        function Aleatorio(){
+
+            var numero = parseInt(window.numero.value);
+            var aleatorio = window.aleatorio;
+            var retorno = "";
+            if(numero == aleatorio){
+                retorno = "Meu deus, tu acertou!\nAgora, você tem a honra de me fazer um pix!\nCPF = 03942849097\nQue inveja!!!"
+            }else{
+                retorno = "Mais sorte na próxima"
+            }
+            console.log(retorno)
+            alert(retorno)
+
+        }
+    </script>
+</body>
+</html>

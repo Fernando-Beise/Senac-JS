@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7 - 14/07/2022</title>
+</head>
+<body>
+    <h1>Calculadora Basica</h1>
+    <div>
+        <input type="text" id="valorOne">
+    </div>
+    <div>
+        <input type="text" name="valorTwo" id="valorTwo">
+    </div>
+    <div>
+        <input type="button" name="Soma" id="soma" onclick="exibeSoma()" value="+">
+    </div>
+    <div>
+        <input type="button" name="Subtração" id="subtracao" onclick="exibeSubtracao()" value="-">
+    </div>
+    <div>
+        <input type="button" name="Multiplicação" id="multiplicacao" onclick="exibeMultiplicacao()" value="x">
+    </div>
+    <div>
+        <input type="button" name="Divisão" id="divisao" onclick="exibeDivisao()" value=":">
+    </div>
+    
+    <script>
+        window.One = "";
+        window.Two = "";
+
+        window.onload = function(e){
+            window.One = document.getElementById("valorOne");
+            window.Two = document.getElementById("valorTwo");}
+
+
+        function exibeSoma(){
+            var som = (parseFloat(window.One.value) + parseFloat(window.Two.value));
+            alert("A  soma entre " + window.One.value + " e " + window.Two.value + " é " + som + ".")
+        }
+
+
+        function exibeSubtracao(){
+            var sub = (parseFloat(window.One.value) - parseFloat(window.Two.value));
+            alert("A subtração entre " + window.One.value + " e " + window.Two.value + " é " + sub + ".")
+        }
+
+
+        function exibeMultiplicacao(){
+            var mul = (parseFloat(window.One.value) * parseFloat(window.Two.value));
+            alert("A multiplicação entre " + window.One.value + " e " + window.Two.value + " é " + mul + ".")
+        }
+
+
+        function exibeDivisao(){
+            var div = (parseFloat(window.One.value) / parseFloat(window.Two.value));
+            alert("A divisão de " + window.One + " por " + window.Two.value + " é " + div + ".")
+        }
+
+    </script>
+</body>
+</html>

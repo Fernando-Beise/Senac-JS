@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 27 - Classificando o Triangulo</title>
+</head>
+<body>
+    <h1>Obs: Calculo para ver se forma um triangulo, e que tipo de triangulo.</h1>
+    <h1></h1>
+    <h1>Insira o valor da reta A</h1>
+    <div>
+        <input type="text" name="menor" id="A">
+    </div>
+    <h1>Insira o valor da reta B</h1>
+    <div>
+        <input type="text" name="segunda" id="B">
+    </div>
+    <h1>Insira o valor reta C</h1>
+    <div>
+        <input type="text" name="maior" id="C">
+    </div>
+    <h1></h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="Triangulo()" value="Essas retas formam um triangulo?">
+    </div>
+    <script>
+        function Triangulo(){
+            var A = parseFloat(document.getElementById("A").value);
+            var B = parseFloat(document.getElementById("B").value);
+            var C = parseFloat(document.getElementById("C").value);
+            var retorno = "";
+
+            if( (A + B > C ) && (A + C > B) && (B + C > A) ){
+
+                retorno = "Essas retas podem formar um triangulo."
+
+                if(A == B == C){
+                    retorno += "\nEste triangulo será equilatero."
+                }else if(A == B || A == C || B == C){
+                    retorno += "\nEste triangulo será isóceles."
+                }else if(A != B && A != C && B != C){
+                    retorno += "\nEste triangulo será escaleno."
+                }
+
+            }else{
+                retorno = "Com retas que possuem tais valores, não é possivel formar um triangulo."
+            }
+            console.log(retorno)
+            alert(retorno)
+        }
+    </script>
+</body>
+</html>
