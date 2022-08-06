@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Exercicio 4 - Feito pelo Professor Uriel</title>
+</head>
+<body>
+    <h1>Média - Feito pelo Uriel</h1>
+    <div>
+        <input type="text" id="valorOne" name="valorOne" class="classValorOne">
+    </div>
+        
+    <div>
+        <input type="text" id="valorTwo">
+    </div>
+        
+    <div>
+        <input type="button" id="botao" onclick="exibeMedia()" value="Exibir Média">
+    </div>
+    <script>
+        function exibeMedia(){
+            var valorOne = document.getElementById("valorOne").value;
+            var valorTwo = document.getElementById("valorTwo").value;
+            
+            var resultado = (parseFloat(valorOne) + parseFloat(valorTwo)) / 2;
+
+            alert("A média entre " + valorOne + " e " + valorTwo + " é igual a " + resultado);
+        }
+    </script>
+</body>
+</html>
