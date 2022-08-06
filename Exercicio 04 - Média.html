@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Atividade 4 - Média</title>
+</head>
+<body>
+    <h1>Somando e Calculando Média</h1>
+    <div>
+        <input type="text" name="Nota1" id="Nota1">
+    </div>
+
+    <div>
+        <input type="text" name="Nota2" id="Nota2">
+    </div>
+
+    <div>
+        <input type="button" name="buton" id="buton" onClick="exibeNome()" value="Exibir Média">
+    </div>
+    
+    <script>
+        function exibeNome()
+        {
+            var parcial = document.getElementById("Nota1").value;
+            var trimestral = document.getElementById("Nota2").value;
+            var Media = (parseFloat(parcial) + parseFloat(trimestral)) / 2;
+
+            console.log("A sua média no trimestre é de " + Media + ".");
+            alert("A sua média no trimestre é de " + Media + ".");
+        }
+    </script>
+</body>
+</html>

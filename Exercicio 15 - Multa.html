@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 15 - Velocidade</title>
+</head>
+<body>
+    <h1>Calculo da velocidade</h1>
+    <div>
+        <input type="text" name="velocidade" id="velocidade">
+        <input type="text" name="maximo" id="maximo">
+        <input type="button" name="botao" id="botao" onclick="Velocidade()" value="Multa">
+    </div>
+    <script>
+        function Velocidade(){
+        var vel = parseFloat(document.getElementById("velocidade").value);
+        var mxm = parseFloat(document.getElementById("maximo").value);
+        //var mul = (vel - mxm);
+        if(vel > mxm){
+            var mul = (vel - mxm);
+            alert("Voce foi multado! O valor da multa é " + (mul*5) + ".");
+        }else{
+            alert("Voce não foi multado.");
+        }}
+    </script>
+</body>
+</html>
