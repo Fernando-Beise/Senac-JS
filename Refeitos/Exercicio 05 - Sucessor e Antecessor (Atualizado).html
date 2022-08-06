@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 5 - Sucessão e Antecessão</title>
+</head>
+<body>
+    <h1>Insira o número desejado</h1>
+    <div>
+        <input type="text" name="num" id="num">
+    </div>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="ant()" value="Antecessor:">
+    </div>
+    <div>
+        <input type="button" name="botao1" id="botao1" onclick="suc()" value="Sucessor:">
+    </div>
+    <script>
+        window.onload = function (e){
+            window.num = document.getElementById("num")
+        }
+        function ant(){
+            var num = parseInt(window.num.value)
+            var ant = (num - 1)
+
+            if(isNaN(ant)){
+                alert("Só é permitido numeros. Letras, medidas, ou caracteres espaciais não são permtidos.")
+            }else{
+            alert("O antecessor de " + num + " é " + ant + ".")}
+        }
+
+        function suc(){
+            var num = parseInt(window.num.value)
+            var suc = (num + 1)
+
+            if(isNaN(suc)){
+                alert("Só é permitido numeros. Letras, medidas, ou caracteres espaciais não são permtidos.")
+            }else{
+            alert("O sucessor de " + num + " é " + suc + ".")}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 6 - Calculando a terça parte e o dobro</title>
+</head>
+<body>
+    <h1>Insira o numero desejado:</h1>
+    <div>
+        <input type="text" name="num" id="num">
+    </div>
+    <div>
+        <input type="button" name="TP" id="TP" onclick="TP()" value="Terça parte:">
+    </div>
+    <div>
+        <input type="button" name="Db" id="Db" onclick="Db()" value="Dobro:">
+    </div>
+    <script>
+        window.onload = function (e){
+            window.num = document.getElementById("num");
+        }
+        function TP(){
+            var num = parseFloat(window.num.value);
+            var tp = (num / 3).toFixed(2);
+            if(isNaN(tp)){
+                alert("só é permitido numeros. Letras, medidas, ou caracteres espaciais não são permtidos.");
+            }else{
+                alert("A terça parte de " + num + " é " + tp + ".");
+            }
+        }
+
+        function Db(){
+            var num = parseFloat(window.num.value);
+            var dobro = (num*2).toFixed(2);
+
+            if(isNaN(dobro)){
+                alert("só é permitido numeros. Letras, medidas, ou caracteres espaciais não são permtidos.");
+            }else{
+                alert("A terça parte de " + num + " é " + dobro + ".");
+            }
+        }
+    </script>
+</body>
+</html>
