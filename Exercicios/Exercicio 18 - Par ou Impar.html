@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 18 - Par ou Impar</title>
+</head>
+<body>
+    <h1>Obs: Desenvolva um programa que informe se o numero é impar ou par</h1>
+    <h1></h1>
+    <h1>Insira um número:</h1>
+    <div>
+        <input type="text" name="num" id="num">
+    </div>
+    <h1></h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="ParImpar()" value="Impar ou Par?">
+    </div>
+    <script>
+        function ParImpar(){
+            var num = parseInt(document.getElementById("num").value);
+            var cal = (num / 2)
+            var ip = (parseInt(cal) - cal)
+
+            if(ip == 0){
+                alert("Par")
+            }else{
+                alert("Impar")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 12 - Promoção</title>
+</head>
+<body>
+    <h1>Promoção de 5%</h1>
+    <div>
+        <input type="text" name="preco" id="preco">
+        <input type="button" name="botao" id="botao" onclick="Prom()" value="Com promoção:">
+    </div>
+    <script>
+        function Prom(){
+            var preco = parseFloat(document.getElementById("preco").value)
+            var prom = parseFloat(preco * 0.05)
+            var comprom = (preco - prom).toFixed(2)
+
+            alert("O Valor com promoção é de: " + comprom + "R$.")
+        }
+    </script>
+</body>
+</html>

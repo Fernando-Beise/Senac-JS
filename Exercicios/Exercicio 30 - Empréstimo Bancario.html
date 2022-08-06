@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 30 - Emprestimo bancario</title>
+</head>
+<body>
+    <h1>Obs: Verifique se o emprestimo é permitido</h1>
+    <h1></h1>
+    <h1>Qual o valor da casa?</h1>
+    <div>
+        <input type="text" name="casa" id="casa">
+    </div>
+    <h1>Salario atual?</h1>
+    <div>
+        <input type="text" name="salario" id="salario">
+    </div>
+    <h1>Em quantos anos será pago?</h1>
+    <div>
+        <input type="text" name="anos" id="anos">
+    </div>
+    <h1></h1>
+    <input type="button" name="botao" id="botao" onclick="permitido()" value="O emprestimo pode ser efetivado?">
+    <script>
+        function permitido(){
+            var casa = parseFloat(document.getElementById("casa").value)
+            var salario = parseFloat(document.getElementById("salario").value)
+            var anos = parseFloat(document.getElementById("anos").value)
+            var permitido = (salario * 0.3)
+            var necessario = ((casa / anos)/12)
+            var retorno
+            if(permitido >= necessario){
+                retorno = "O emprestimo pode ser efetivado"
+            }else{
+                retorno = "Desculpe.\nO emprestimo não pode ser efetivado.\nPois o valor mensal necessario, é maior que 30% do seu salario."
+            }
+            alert(retorno)
+            console.log(retorno)
+        }
+    </script>
+</body>
+</html>

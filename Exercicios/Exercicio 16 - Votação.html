@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 16 - Data de Nascimento</title>
+</head>
+<body>
+    <h1>Idade</h1>
+    <div>
+        <input type="text" name="nasc" id="nasc">
+        <input type="text" name="ano" id="ano">
+        <input type="button" name="botao" id="botao" onclick="votar()" value="Já posso votar?">
+    </div>
+    <script>
+        function votar(){
+            var nasc = parseFloat(document.getElementById("nasc").value);
+            var ano = parseFloat(document.getElementById("ano").value);
+            var vt = (ano - nasc);
+            if(vt => 16){
+                alert("Voce tem " + vt + " anos. Então você pode votar.");
+            }else{
+                alert("Voce tem " + vt + " anos. Então você NÃO pode votar.");
+            }
+        }
+
+        /*function votar(){
+            var nasc = parseFloat(document.getElementById("nasc").value);
+            var ano = parseFloat(document.getElementById("ano").value);
+            var vt = (ano - nasc);
+            var msg = ""
+            if(vt < 18){
+                var msg = "NÃO "
+            }
+            alert("Voce tem " + vt + " anos. Então você " + msg + "pode votar.")
+        }
+
+        MODO URIEL*/
+        
+    </script>
+    
+</body>
+</html>

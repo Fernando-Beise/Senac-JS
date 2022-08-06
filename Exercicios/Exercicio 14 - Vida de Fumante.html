@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 14 - Fumo</title>
+</head>
+<body>
+    <h1>Vida de Fumante</h1>
+    <div>
+        <input type="text" name="dias" id="dias">
+        <input type="text" name="anos" id="anos">
+        <input type="button" name="botao" id="botao" onclick="fumo()" value="Quanto tempo perdi?">
+    </div>
+    <script>
+        function fumo(){
+            var dias = parseFloat(document.getElementById("dias").value);
+            var anos = parseFloat(document.getElementById("anos").value);
+            var tempo = ((((dias * (anos * 365)) * 10) / 60) / 24).toFixed(0);
+            alert("Voce perdeu " + tempo + " dias de vida.")
+        }
+    </script>
+</body>
+</html>

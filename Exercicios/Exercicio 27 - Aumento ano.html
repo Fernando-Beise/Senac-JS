@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 27 - Quanto de aumento por anos de trabalho</title>
+</head>
+<body>
+    <h1>Obs: Quanto recebo de aumento por quanto tempo eu trabalho</h1>
+    <h1></h1>
+    <h1>Insira seu nome:</h1>
+    <div>
+        <input type="text" name="nome" id="nome">
+    </div>
+    <h1>Insira seu salario:</h1>
+    <div>
+        <input type="text" name="salario" id="salario">
+    </div>
+    <h1>Insira a quantos anos você trabalha</h1>
+    <div>
+        <input type="text" name="anos" id="anos">
+    </div>
+    <h1></h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="Aumento()" value="Quanto merece de aumento?">
+    </div>
+
+    <script>
+        function Aumento(){
+            var nome = document.getElementById("nome").value;
+            var salario = parseFloat(document.getElementById("salario").value);
+            var anos = parseInt(document.getElementById("anos").value);
+
+            var retorno = "";
+
+            if(anos< 3 && anos >= 0){
+                var aumento = (salario + (salario * 0.03)).toFixed(2);
+                retorno = nome + ".\nPelos seus anos de serviço, você merece um aumento!\nCom o aumento, seu salario será de: " + aumento;
+            }else if(anos>=3 && anos < 10){
+                var aumento = (salario + (salario * 0.125)).toFixed(2);
+                retorno = nome + ".\nPelos seus anos de serviço, você merece um aumento!\nCom o aumento, seu salario será de: " + aumento;
+            }else if(anos >= 10){
+                var aumento = (salario + (salario * 0.2)).toFixed(2);
+                retorno = nome + ".\nPelos seus anos de serviço, você merece um aumento!\nCom o aumento, seu salario será de: " + aumento;
+            }else{
+                retorno = "Por favor escreva somente numeros positivos.";
+            }
+            console.log(retorno);
+            alert(retorno);
+        }
+    </script>
+</body>
+</html>

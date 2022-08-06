@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 11 - Delta</title>
+</head>
+<body>
+    <h1>Calculando Bhaskara</h1>
+    <div>
+        <input type="text" name="A" id="A">
+    </div>
+    <div>
+        <input type="text" name="B" id="B">
+    </div>
+    <div>
+        <input type="text" name="C" id="C">
+    </div>
+    <div>
+        <input type="button" name="bk" id="bk" onclick="Delta()" value="Calcule o Delta">
+    </div>
+    <script>
+        function Delta(){
+            var A = parseFloat(document.getElementById("A").value);
+            var B = parseFloat(document.getElementById("B").value);
+            var C = parseFloat(document.getElementById("C").value);
+            var Del = (B*B)-4*A*C;
+
+            //print(Del);
+            alert("O Delta é: " + Del + ".");
+        }
+    </script>
+</body>
+</html>
