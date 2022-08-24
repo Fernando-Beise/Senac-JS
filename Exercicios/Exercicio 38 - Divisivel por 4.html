@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 38 - Divisivel por 4</title>
+</head>
+<body>
+    <h1>obs: Marcação em divisiveis por 4</h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="divisiveis()" value="Executar:">
+    </div>
+    <script>
+        function divisiveis(){
+            var cont = 31;
+            var retorno = "";
+            do{
+                cont --;
+                if(cont%4 == 0){
+                    retorno += "[" + cont + "] ";
+                }else{
+                    retorno += cont + " ";
+                }
+            }while(cont>0)
+            alert(retorno)
+
+        }
+    </script>
+    
+</body>
+</html>
