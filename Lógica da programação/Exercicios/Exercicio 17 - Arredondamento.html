@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 17 - Aprovação</title>
+</head>
+<body>
+    <h1>Nota do Aluno</h1>
+    <div>
+        <input type="text" name="nota1" id="nota1">
+        <input type="text" name="nota2" id="nota2">
+        <input type="text" name="nota3" id="nota3">
+        <input type="button" name="botao" id="botao" onclick="Aprovado()" value="Você foi aprovado?">
+    </div>
+    <script>
+        function Aprovado()
+        {
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var nota3 = parseFloat(document.getElementById("nota3").value);
+            var media = ((nota1 + nota2 + nota3)/3).toFixed(1);
+            var arred = (media - parseInt(media));
+            var final = 0;
+            if(arred => 0.8){
+                final = Math.ceil(media)
+            } 
+            else if(arred <= 0.3)
+            {
+                final = Math.floor(media)
+            }
+            else if(0.3 < arred > 0.8)
+            {
+            //else{
+             final = (0.5 + parseInt(media))
+            }
+
+
+            if(final >= 7){
+                alert("Você foi aprovado com uma nota de "+final+"!");
+            }else{
+                alert("Você foi REPROVADO com uma nota de "+final+"!");
+            }
+        }
+        
+
+        /*function Aprovado(){
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var nota3 = parseFloat(document.getElementById("nota3").value)
+            var media = ((nota1 + nota2 + nota3)/3).toFixed(0)
+            msg = "A"
+            if(media < 7){
+                msg = "RE"
+            }
+            alert("Você foi "+msg+"PROVADO com uma nota de "+media+"!")
+            
+        }*/
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10 - Pintura</title>
+</head>
+<body>
+    <h1>Area da parede</h1>
+    <div>
+        <input type="text" name="largura" id="largura">
+    </div>    
+    <div>
+        <input type="text" name="comprimento" id="comprimento">
+    </div>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="calculo()" value="Quantas latas de tintas?">
+    </div>
+    <script>
+        function calculo(){
+            var largura = parseFloat(document.getElementById("largura").value);
+            var comprimento = parseFloat(document.getElementById("comprimento").value);
+            var area = parseFloat(largura * comprimento);
+            var tintas = area / 2;
+
+            alert("Você precisará de " + tintas + " latas de tinta para pintar esta parede.")
+            console.log("Você precisará de " + tintas + " latas de tinta para pintar esta parede.")
+        }
+    </script>
+</body>
+</html>

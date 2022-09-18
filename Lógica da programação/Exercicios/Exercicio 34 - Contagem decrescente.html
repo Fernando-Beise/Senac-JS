@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 34 - Contagem decrescente</title>
+</head>
+<body>
+    <h1>Obs: Contagem: '10 9 8 7 6 5 4 3 Acabou!'</h1>
+    <h1></h1>
+    <div>
+        <input type="button" name="button" id="button" onclick="decrescente()" value="Executar:">
+    </div>
+    <script>
+        function decrescente(){
+            var retorno = "";
+            for(var cont = 10; cont>=3; cont--){
+                retorno += cont + " ";
+            }
+            retorno += "Acabou!";
+            alert(retorno);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 40 - Somatória consecutiva</title>
+</head>
+<body>
+    <h1>Obs: '6 + 8 + 10... + 100 = '</h1>
+    <script>
+        window.onload = function lala(){
+            var inicial = Number(window.prompt("Insira o numero inicial:"));
+            var final = Number(window.prompt("Insira o numero final:"));
+            var retorno = 0;
+            for(var sequencia = inicial; sequencia<=final; sequencia += 2){
+                retorno += sequencia;
+            }
+            alert(retorno);
+        }
+    </script>
+</body>
+</html>

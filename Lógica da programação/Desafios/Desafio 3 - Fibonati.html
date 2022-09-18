@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonati</title>
+</head>
+<body>
+    <script>
+        window.onload = function fran(){
+            var vetor = [];
+            var retorno = "";
+            for(var pos = 0; pos<=15; pos++){
+                if(retorno != ""){
+                    retorno += "\n";
+                }
+                if(pos <= 1){
+                    vetor[pos] = 1
+                    retorno+=`${vetor[pos]} - ${pos}° vetor`;
+                }else{
+                    vetor[pos] = Number(vetor[pos-1]) + Number(vetor[pos-2]);
+                    retorno+= `${vetor[pos]} - ${pos}° vetor`;}
+                
+            }
+            console.log(retorno);
+            alert(retorno);
+
+            
+        }
+    </script>
+</body>
+</html>

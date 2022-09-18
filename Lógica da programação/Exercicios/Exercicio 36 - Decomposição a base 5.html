@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 36 - Decomposição a base 5</title>
+</head>
+<body>
+    <h1>Obs: '100 95 90 85 80 75 70... 0 Acabou!'</h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="decomposicao()" value="Executar">
+    </div>
+    <script>
+        function decomposicao(){
+            var retorno = "";
+
+            for(var cont = 100; cont>=0; cont -= 5){
+                retorno += cont + " ";
+            }
+
+            retorno += "Acabou!"
+            alert(retorno)
+        }
+    </script>
+    
+</body>
+</html>

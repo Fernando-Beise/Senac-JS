@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 49 - Preenchimento automatico de um vetor</title>
+</head>
+<body>
+    <script>
+        window.onload = function fran(){
+            var vetor = [];
+            var retorno = "";
+            for(var pos = 0; pos<8; pos++){
+                vetor[pos] = window.prompt("Insira um valor desejado:");
+                if(retorno != ""){
+                    retorno += "\n";
+                }
+                retorno += `${vetor[pos]} - ${pos+1}º vetor`;
+            }
+            console.log(retorno);
+            alert(retorno);
+
+            
+        }
+    </script>
+    
+</body>
+</html>

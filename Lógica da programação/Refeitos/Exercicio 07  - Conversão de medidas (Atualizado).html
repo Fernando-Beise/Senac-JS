@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 3 - Calculadora</title>
+    </head>
+    <body>
+        <h1>Insira o primeiro valor:</h1>
+        <div>
+            <input type="text" name="valOne" id="valOne">
+        </div>
+        <h1>Insira o segundo valor:</h1>
+        <div>
+            <input type="text" name="valTwo" id="valTwo">
+        </div>
+        <div>
+            <input type="button" name="soma" id="soma" onclick="soma()" value="+">
+            <input type="button" name="subtracao" id="subtracao" onclick="subtracao()" value="-">
+            <input type="button" name="multiplicacao" id="multiplicacao" onclick="multiplicacao()" value="X">
+            <input type="button" name="divisao" id="divisao" onclick="divisao()" value="/">
+        </div>
+        <script>
+
+            window.valOne = "";
+            window.valTwo = "";
+
+            window.onload = function(e){
+                window.valOne = document.getElementById("valOne");
+                window.valTwo = document.getElementById("valTwo");
+            }
+
+            function soma(){
+                var soma = (parseFloat(window.valOne.value) + parseFloat(window.valTwo.value));
+
+                if(isNaN(soma)){
+                    alert("é permitido somente numeros [1, 2, 3, 4, 5, 6, 7, 8, 9], nada além disso.")
+                }else{
+                    alert("A soma entre "+ window.valOne.value +" e "+ window.valTwo.value + " é de " + soma + ".")
+                }}
+
+            function subtracao(){
+            var subtracao = (parseFloat(window.valOne.value) - parseFloat(window.valTwo.value));
+
+            if(isNaN(subtracao)){
+                alert("é permitido somente numeros [1, 2, 3, 4, 5, 6, 7, 8, 9], nada além disso.")
+            }else{
+                alert("A subtração entre "+ window.valOne.value +" e "+ window.valTwo.value + " é de " + subtracao + ".")
+            }}
+
+            function multiplicacao(){
+            var multiplicacao = (parseFloat(window.valOne.value) * parseFloat(window.valTwo.value)).toFixed(2);
+
+            if(isNaN(multiplicacao)){
+                alert("é permitido somente numeros [1, 2, 3, 4, 5, 6, 7, 8, 9], nada além disso.")
+            }else{
+                alert("A multiplicação entre " + window.valOne.value + " e " + window.valTwo.value + " é de " + multiplicacao + ".")
+            }}
+
+            function divisao(){
+                var divisao = (parseFloat(window.valOne.value) / parseFloat(window.valTwo.value)).toFixed(2);
+
+                if(isNaN(divisao)){
+                    alert("é permitido somente numeros [1, 2, 3, 4, 5, 6, 7, 8, 9], nada além disso.")
+                }else{
+                    alert("A divisao entre "+ window.valOne.value +" e "+ window.valTwo.value + " é de " + divisao + ".")
+                }}
+        </script>
+    </body>

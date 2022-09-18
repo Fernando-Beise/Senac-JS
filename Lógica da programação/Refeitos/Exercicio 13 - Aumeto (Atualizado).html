@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 13 - Aumento</title>
+</head>
+<body>
+    <h1>Obs: Algoritmo para calcular um aumento no salario de um funcionario em 15%</h1>
+    <h1></h1>
+    <h1>Insira o seu salario atual:</h1>
+    <div>
+        <input type="text" name="salario" id="salario">
+    </div>
+    <h1></h1>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="Aumento()" value="Com um aumento de 15%">
+    </div>
+    <script>
+        function Aumento(){
+            var salario = parseFloat(document.getElementById("salario").value);
+            var aumento = (salario + (salario * 0.15)).toFixed(2);
+            if(isNaN(aumento)){
+                alert("Por favor, insira somente numeros.")
+            }else(
+                alert("Você ganhará " + aumento + " com um aumento de 15%")
+            )
+        }
+    </script>
+</body>
+</html>

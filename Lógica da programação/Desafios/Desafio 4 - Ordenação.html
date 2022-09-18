@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3 - Ordenação</title>
+</head>
+<body>
+    <script>
+        window.onload = function (){
+            var num = [];
+            var retornoRandom = "";
+            var retornoOrdem = "";
+            for(var pos = 0; pos<10; pos++){
+                var aleatorio = Math.floor(Math.random()*101);
+                num[pos] = aleatorio;
+                if(retornoRandom != ""){
+                    retornoRandom+="\n"
+                }
+                retornoRandom += num[pos]
+                for(var cont = 0; cont<pos; cont++){
+                    if(num[pos] < num[cont]){
+                        var adj = num[cont];
+                        num[cont] = num[pos]
+                        num[pos] = adj
+                    }
+                }
+            }
+            for(var crescente = 0; crescente<10; crescente++){
+                if(retornoOrdem != ""){
+                    retornoOrdem+="\n"
+                }
+                retornoOrdem += num[crescente];
+            }
+            alert(retornoRandom)
+            console.log(retornoRandom)
+            alert(retornoOrdem)
+            console.log(retornoOrdem)
+        }
+    </script>
+</body>
+</html>

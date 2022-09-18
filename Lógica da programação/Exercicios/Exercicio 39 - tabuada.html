@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 39 - Tabuada</title>
+</head>
+<body>
+    <h1>obs: tubuada desejada</h1>
+    <h1></h1>
+    <h1>Insira o valor minimo:</h1>
+    <div>
+        <input type="text" name="valormin" id="valormin">
+    </div>
+    <h1>Insira o valor maximo:</h1>
+    <div>
+        <input type="text" name="valormxm" id="valormxm">
+    </div>
+    <h1>Insira de quantos em quantos numeros:</h1>
+    <div>
+        <input type="text" name="dqeq" id="dqeq">
+    </div>
+    <div>
+        <input type="button" name="botao" id="botao" onclick="Tabuada()" value="Executar">
+    </div>
+    <script>
+        function Tabuada(){
+            var retorno = "";
+            var valormin = Number(document.getElementById("valormin").value);
+            var valormxm = Number(document.getElementById("valormxm").value);
+            var Tabuada = Number(document.getElementById("dqeq").value);
+            retorno = "Valor minimo: " + valormin + "\nValor máximo: " + valormxm + "\nDigite o incremento: " + Tabuada + "\nContagem: "
+
+            for(var inicio = valormin; inicio<=valormxm; inicio+=Tabuada){
+                retorno += inicio + " ";
+            }
+            retorno += "Acabou!"
+            alert(retorno)
+        }
+    </script>
+</body>
+</html>

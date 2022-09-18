@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 52 - Vetores repetitivos</title>
+</head>
+<body>
+    <script>
+        window.onload = function (){
+            var num1 = Number(window.prompt("Insira o primeiro numero desejado"));
+            var num2 = Number(window.prompt("Insira o segundo numero desejado"));
+            var numarray = [];
+            var retorno = "";
+            for(var pos = 0; pos<10; pos++){
+                if(retorno != ""){
+                    retorno+="\n";
+                }
+                if(numarray[pos - 1] == num1){
+                    numarray[pos] = num2;
+                    retorno+= `${num2} - ${pos+1}° vetor`;
+                }else{
+                    numarray[pos] = num1;
+                    retorno+=`${num1} - ${pos+1}° vetor`;
+                }
+                
+
+            }
+            console.log(retorno);
+            alert(retorno);
+        }
+    </script>
+</body>
+</html>

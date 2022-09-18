@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 33 - Contagem crescente</title>
+</head>
+<body>
+    <h1>Obs: Contagem: '6 7 8 9 10 11 Acabou!'</h1>
+    <h1></h1>
+    <div>
+        <input type="button" name="buttonDo" id="buttonDo" onclick="contagemDo()" value="Execute Do">
+        <input type="button" name="buttonWhile" id="buttonWhile" onclick="contagemWhile()" value="Execute While">
+        <input type="button" name="buttonForeache" id="buttonForeache" onclick="contagemForeach()" value="Execute Foreach">
+        <input type="button" name="buttonFor" id="buttonFor" onclick="contagemFor()" value="Execute For">
+    </div>
+    <script>
+        function contagemDo(){
+            var cont = 6;
+            var retorno = "";
+
+            do{
+                retorno += cont + " ";
+                cont++;
+            }
+            while(cont<=11);
+            retorno += "Acabou!"; 
+            alert(retorno);
+        }
+
+        function contagemWhile(){
+            var cont = 6;
+            var retorno = "";
+
+            while(cont<=11){
+                retorno += cont + " ";
+                cont ++;
+            }
+            retorno += "Acabou!";
+            alert(retorno);
+        }
+
+        function contagemForeach(){
+            var professor = [6,7,8,9,10,11];
+            var retorno = "";
+
+            professor.forEach(function(e){
+                retorno += e + " ";
+            });
+
+            retorno += "Acabou!";
+            alert(retorno);
+        }
+
+        function contagemFor(){
+            var retorno = "";
+            for(var pos = 6; pos<=11; pos++){
+                retorno += pos + " ";
+            }
+            retorno += "Acabou!";
+            alert(retorno);
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 44 - Sorteio</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+        var m5 = 0;
+        var d3 = 0;
+        var retorno = "";
+        for(var cont = 0; cont<20; cont++){
+            var num = Math.floor((Math.random()*11));
+            if(num>5){
+                m5++;
+            }if(num%3 == 0){
+                d3++;
+            }
+            retorno += num + "; ";
+        }
+        retorno += `foram os numeros sorteados\n${m5} numeros maiores que 5\n${d3} numeros divisiveis por 3`;
+        console.log(retorno);
+        alert(retorno);
+        }
+
+    </script>
+</body>
+</html>
