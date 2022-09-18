@@ -8,9 +8,10 @@ Há três módulos neste curso:
 * Módulo 2 = Desenvolvimento WEB Front End (108h)
 * Módulo 3 = Javascript (36h)
 
-** Desafios = Uma lista de exercicios mais dificeis.
-** Exercicios = Uma lista de exercicios.
-** Refeitos = Uma lista de exercicios que refiz com meu atual conhecimento.
+### Sub Pastas
+* Desafios = Uma lista de exercicios mais dificeis.
+* Exercicios = Uma lista de exercicios.
+* Refeitos = Uma lista de exercicios que refiz com meu atual conhecimento.
 
 ## Config:
 * Feitos em VSCode.
