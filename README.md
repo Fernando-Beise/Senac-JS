@@ -1,13 +1,17 @@
-# Exercise list
-* A list of exercises done in Senac (RS - Santa Cruz do sul).
-* These lists are in chronological order.
+# Lista de Exercicios
+* Uma lista de exercicios feita no Senac (RS - Santa Cruz do Sul.
+* Seguem uma ordem cronológica (1->2...)
 
-## Folders:
-* Correções = A list of exercises done in a different way (done by Uriel).
-* Desafios = A list of challenges done outside of class.
-* Exercicios = A list of exercises done in class.
-* Refeitos = A list of old exercises, done with current knowledge .
+## Pastas:
+Há três módulos neste curso:
+* Módulo 1 = Lógica da programação (60h)
+* Módulo 2 = Desenvolvimento WEB Front End (108h)
+* Módulo 3 = Javascript (36h)
 
-## Specs:
-* Done in VSCode.
-* Teachers: Uriel Goulart, Nairo Sanches.
+** Desafios = Uma lista de exercicios mais dificeis.
+** Exercicios = Uma lista de exercicios.
+** Refeitos = Uma lista de exercicios que refiz com meu atual conhecimento.
+
+## Config:
+* Feitos em VSCode.
+* Professores: Uriel Goulart, Nairo Sanches.
